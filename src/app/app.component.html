@@ -1,0 +1,35 @@
+<app-loader></app-loader>
+<app-alert></app-alert>
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item">
+      Ngx-helpers
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" (click)="toggleNavbar()" #navBurger
+      data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu" #navMenu>
+    <div class="navbar-start">
+      <a (click)="toggleNavbar()" class="navbar-item" routerLink="" routerLinkActive="active">Home</a>
+      <a (click)="toggleNavbar()" class="navbar-item" routerLink="/beers" routerLinkActive="active">Documentation</a>
+      <a (click)="toggleNavbar()" class="navbar-item" routerLink="/beers" routerLinkActive="active">Example App</a>
+    </div>
+
+    <div class="is-hidden-mobile is-hidden-tablet-only navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-danger">
+            <strong>Github</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
